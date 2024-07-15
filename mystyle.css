@@ -1,0 +1,48 @@
+.infobox {
+  margin: 10px 0px 20px 50px;
+  font-size: smaller;
+  color: #666;
+}
+
+.column {
+  padding: 0.5em 1em;
+  margin-bottom: 3em;
+  border: 1px solid #000080;
+  border-radius: 5px;
+  background: #e9ffff;
+}
+
+.config {
+  padding: 0.5em 1em;
+  margin: 0.5em 0.5em;
+  border: 3px inset #ff6936;
+  border-radius: 5px;
+  background: #fff7ed;
+}
+
+.important {
+  padding: 0.5em 1em;
+  margin: 0.5em 0.5em;
+  background: #fff7f7;
+  border: 1px solid #ffa4a4;
+  font-weight: bold;
+}
+
+.process {
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.excelcode {
+  padding: 0.5em 1em;
+  margin: 0;
+  text-align:center;
+  border: 1px solid #f0f0f0;
+  background-color: #f7f7f7;
+}
+
+.note {
+  background-image: url('image/icon-note.png');
+}

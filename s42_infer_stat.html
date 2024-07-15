@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.2 推測統計と推定・検定 | 心理統計をもういちど</title>
+  <meta name="description" content="総和記号の理解からはじめる統計再入門" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.2 推測統計と推定・検定 | 心理統計をもういちど" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="総和記号の理解からはじめる統計再入門" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.2 推測統計と推定・検定 | 心理統計をもういちど" />
+  
+  <meta name="twitter:description" content="総和記号の理解からはじめる統計再入門" />
+  
+
+<meta name="author" content="Almond Fish" />
+
+
+<meta name="date" content="2024-05-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="s41_setting.html"/>
+<link rel="next" href="s43_degree_freedom.html"/>
+<script src="assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">心理統計を、もういちど</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>はじめに</a></li>
+<li class="chapter" data-level="1" data-path="c1_sigma.html"><a href="c1_sigma.html"><i class="fa fa-check"></i><b>1</b> 総和記号と和解しよう</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="s11_about_sigma.html"><a href="s11_about_sigma.html"><i class="fa fa-check"></i><b>1.1</b> 総和記号とは</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="s11_about_sigma.html"><a href="s11_about_sigma.html#総和記号のシグマくん"><i class="fa fa-check"></i><b>1.1.1</b> 総和記号のシグマくん</a></li>
+<li class="chapter" data-level="1.1.2" data-path="s11_about_sigma.html"><a href="s11_about_sigma.html#足し算の筆算としての総和記号"><i class="fa fa-check"></i><b>1.1.2</b> 足し算の筆算としての総和記号</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="s12_solve_sigma.html"><a href="s12_solve_sigma.html"><i class="fa fa-check"></i><b>1.2</b> 総和記号の読み解き方</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="s12_solve_sigma.html"><a href="s12_solve_sigma.html#変数とデータ"><i class="fa fa-check"></i><b>1.2.1</b> 変数とデータ</a></li>
+<li class="chapter" data-level="1.2.2" data-path="s12_solve_sigma.html"><a href="s12_solve_sigma.html#総和記号が表すのはひとつの数"><i class="fa fa-check"></i><b>1.2.2</b> 総和記号が表すのはひとつの数</a></li>
+<li class="chapter" data-level="1.2.3" data-path="s12_solve_sigma.html"><a href="s12_solve_sigma.html#データが何個あるのかわからない"><i class="fa fa-check"></i><b>1.2.3</b> データが何個あるのかわからない</a></li>
+<li class="chapter" data-level="1.2.4" data-path="s12_solve_sigma.html"><a href="s12_solve_sigma.html#データをもれなく呼び出す工夫"><i class="fa fa-check"></i><b>1.2.4</b> データをもれなく呼び出す工夫</a></li>
+<li class="chapter" data-level="1.2.5" data-path="s12_solve_sigma.html"><a href="s12_solve_sigma.html#合計したくないデータの扱い"><i class="fa fa-check"></i><b>1.2.5</b> 合計したくないデータの扱い</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="s13_about_mean.html"><a href="s13_about_mean.html"><i class="fa fa-check"></i><b>1.3</b> 総和記号の使い道（１）平均</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="s13_about_mean.html"><a href="s13_about_mean.html#平らに均した量としての平均"><i class="fa fa-check"></i><b>1.3.1</b> 平らに均した量としての平均</a></li>
+<li class="chapter" data-level="1.3.2" data-path="s13_about_mean.html"><a href="s13_about_mean.html#データの重心としての平均"><i class="fa fa-check"></i><b>1.3.2</b> データの重心としての平均</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="s14_calc_mean.html"><a href="s14_calc_mean.html"><i class="fa fa-check"></i><b>1.4</b> 平均の計算を読み解く</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="s14_calc_mean.html"><a href="s14_calc_mean.html#平均の計算式"><i class="fa fa-check"></i><b>1.4.1</b> 平均の計算式</a></li>
+<li class="chapter" data-level="1.4.2" data-path="s14_calc_mean.html"><a href="s14_calc_mean.html#分数とは割り算"><i class="fa fa-check"></i><b>1.4.2</b> 分数とは割り算</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c2_transform.html"><a href="c2_transform.html"><i class="fa fa-check"></i><b>2</b> 総和記号の変身術と平方和</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="s21_transform1.html"><a href="s21_transform1.html"><i class="fa fa-check"></i><b>2.1</b> 第一の変身術「分身」</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="s21_transform1.html"><a href="s21_transform1.html#設定5人の子どもを連れてスーパーでお買い物"><i class="fa fa-check"></i><b>2.1.1</b> 設定：5人の子どもを連れてスーパーでお買い物</a></li>
+<li class="chapter" data-level="2.1.2" data-path="s21_transform1.html"><a href="s21_transform1.html#第一の方法おやつセットはそれぞれいくらか"><i class="fa fa-check"></i><b>2.1.2</b> 第一の方法：おやつセットはそれぞれいくらか</a></li>
+<li class="chapter" data-level="2.1.3" data-path="s21_transform1.html"><a href="s21_transform1.html#第二の方法おやつの合計とジュースの合計はそれぞれいくらか"><i class="fa fa-check"></i><b>2.1.3</b> 第二の方法：おやつの合計とジュースの合計はそれぞれいくらか</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="s22_transform2.html"><a href="s22_transform2.html"><i class="fa fa-check"></i><b>2.2</b> 第二の変身術「エヌ倍」</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="s22_transform2.html"><a href="s22_transform2.html#第一段階分身させる"><i class="fa fa-check"></i><b>2.2.1</b> 第一段階：「分身」させる</a></li>
+<li class="chapter" data-level="2.2.2" data-path="s22_transform2.html"><a href="s22_transform2.html#出席番号のないデータ"><i class="fa fa-check"></i><b>2.2.2</b> 出席番号のないデータ</a></li>
+<li class="chapter" data-level="2.2.3" data-path="s22_transform2.html"><a href="s22_transform2.html#第二段階エヌ倍に置き換える"><i class="fa fa-check"></i><b>2.2.3</b> 第二段階：「エヌ倍」に置き換える</a></li>
+<li class="chapter" data-level="2.2.4" data-path="s22_transform2.html"><a href="s22_transform2.html#総和記号の守備範囲に注意"><i class="fa fa-check"></i><b>2.2.4</b> 総和記号の守備範囲に注意</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="s23_transform3.html"><a href="s23_transform3.html"><i class="fa fa-check"></i><b>2.3</b> 第三の変身術「後がけ」</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="s23_transform3.html"><a href="s23_transform3.html#第一段階分身させる-1"><i class="fa fa-check"></i><b>2.3.1</b> 第一段階：「分身」させる</a></li>
+<li class="chapter" data-level="2.3.2" data-path="s23_transform3.html"><a href="s23_transform3.html#分配法則を逆向きに"><i class="fa fa-check"></i><b>2.3.2</b> 分配法則を逆向きに</a></li>
+<li class="chapter" data-level="2.3.3" data-path="s23_transform3.html"><a href="s23_transform3.html#第二段階後がけ"><i class="fa fa-check"></i><b>2.3.3</b> 第二段階：後がけ</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="s24_calc_deviation.html"><a href="s24_calc_deviation.html"><i class="fa fa-check"></i><b>2.4</b> 総和記号の使い道（２）偏差の総和</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="s24_calc_deviation.html"><a href="s24_calc_deviation.html#第一段階分身させる-2"><i class="fa fa-check"></i><b>2.4.1</b> 第一段階：「分身」させる</a></li>
+<li class="chapter" data-level="2.4.2" data-path="s24_calc_deviation.html"><a href="s24_calc_deviation.html#第二段階二つ目のシグマくんはエヌ倍にする"><i class="fa fa-check"></i><b>2.4.2</b> 第二段階：二つ目のシグマくんは「エヌ倍」にする</a></li>
+<li class="chapter" data-level="2.4.3" data-path="s24_calc_deviation.html"><a href="s24_calc_deviation.html#平らに均した量としての平均-1"><i class="fa fa-check"></i><b>2.4.3</b> 平らに均した量としての平均</a></li>
+<li class="chapter" data-level="2.4.4" data-path="s24_calc_deviation.html"><a href="s24_calc_deviation.html#第三段階データの合計平均のエヌ倍"><i class="fa fa-check"></i><b>2.4.4</b> 第三段階：データの合計＝平均のエヌ倍</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="s25_calc_sumofsquare.html"><a href="s25_calc_sumofsquare.html"><i class="fa fa-check"></i><b>2.5</b> 総和記号の使い道（３）偏差平方和</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="s25_calc_sumofsquare.html"><a href="s25_calc_sumofsquare.html#偏差平方を平均したものが分散"><i class="fa fa-check"></i><b>2.5.1</b> 偏差平方を平均したものが分散</a></li>
+<li class="chapter" data-level="2.5.2" data-path="s25_calc_sumofsquare.html"><a href="s25_calc_sumofsquare.html#平均するという動詞"><i class="fa fa-check"></i><b>2.5.2</b> 「平均する」という動詞</a></li>
+<li class="chapter" data-level="2.5.3" data-path="s25_calc_sumofsquare.html"><a href="s25_calc_sumofsquare.html#平均値が小数なら丸めて計算してもいいのか"><i class="fa fa-check"></i><b>2.5.3</b> 平均値が小数なら、丸めて計算してもいいのか</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c3_variance.html"><a href="c3_variance.html"><i class="fa fa-check"></i><b>3</b> 分散公式を読み解く</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html"><i class="fa fa-check"></i><b>3.1</b> 分散公式とは</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#ゴール地点を確かめよう"><i class="fa fa-check"></i><b>3.1.1</b> ゴール地点を確かめよう</a></li>
+<li class="chapter" data-level="3.1.2" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#第一段階二乗の計算の展開"><i class="fa fa-check"></i><b>3.1.2</b> 第一段階：二乗の計算の展開</a></li>
+<li class="chapter" data-level="3.1.3" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#第二段階分身させる"><i class="fa fa-check"></i><b>3.1.3</b> 第二段階：「分身」させる</a></li>
+<li class="chapter" data-level="3.1.4" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#第三段階総和記号cはエヌ倍にする"><i class="fa fa-check"></i><b>3.1.4</b> 第三段階：総和記号Cは「エヌ倍」にする</a></li>
+<li class="chapter" data-level="3.1.5" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#第四段階総和記号bはまず後がけにする"><i class="fa fa-check"></i><b>3.1.5</b> 第四段階：総和記号Bは、まず「後がけ」にする</a></li>
+<li class="chapter" data-level="3.1.6" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#第五段階変形結果を代入すると"><i class="fa fa-check"></i><b>3.1.6</b> 第五段階：変形結果を代入すると</a></li>
+<li class="chapter" data-level="3.1.7" data-path="s31_variance_theory.html"><a href="s31_variance_theory.html#公式の使い道"><i class="fa fa-check"></i><b>3.1.7</b> 公式の使い道</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html"><i class="fa fa-check"></i><b>3.2</b> 平均値の移動と偏差平方和の過大評価</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#整数に丸めた平均値を使うと"><i class="fa fa-check"></i><b>3.2.1</b> 整数に丸めた平均値を使うと</a></li>
+<li class="chapter" data-level="3.2.2" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#計算誤差はどれくらいか"><i class="fa fa-check"></i><b>3.2.2</b> 計算誤差はどれくらいか</a></li>
+<li class="chapter" data-level="3.2.3" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#第一段階中カッコの中を整理して展開する"><i class="fa fa-check"></i><b>3.2.3</b> 第一段階：中カッコの中を整理して展開する</a></li>
+<li class="chapter" data-level="3.2.4" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#第二段階二乗の展開と分身"><i class="fa fa-check"></i><b>3.2.4</b> 第二段階：二乗の展開と「分身」</a></li>
+<li class="chapter" data-level="3.2.5" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#第三段階エヌ倍"><i class="fa fa-check"></i><b>3.2.5</b> 第三段階：「エヌ倍」</a></li>
+<li class="chapter" data-level="3.2.6" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#第四段階後がけ"><i class="fa fa-check"></i><b>3.2.6</b> 第四段階：「後がけ」</a></li>
+<li class="chapter" data-level="3.2.7" data-path="s32_variance_bias.html"><a href="s32_variance_bias.html#第五段階まとめ"><i class="fa fa-check"></i><b>3.2.7</b> 第五段階：まとめ</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="s33_my_question.html"><a href="s33_my_question.html"><i class="fa fa-check"></i><b>3.3</b> 平均値は偏差平方和を最小にする値</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="s33_my_question.html"><a href="s33_my_question.html#偏差平方和を最小にする定数を求める"><i class="fa fa-check"></i><b>3.3.1</b> 偏差平方和を最小にする定数を求める</a></li>
+<li class="chapter" data-level="3.3.2" data-path="s33_my_question.html"><a href="s33_my_question.html#分散分析との関係は"><i class="fa fa-check"></i><b>3.3.2</b> 分散分析との関係は</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c4_statictest.html"><a href="c4_statictest.html"><i class="fa fa-check"></i><b>4</b> 統計的仮説検定についてのあれこれ</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="s41_setting.html"><a href="s41_setting.html"><i class="fa fa-check"></i><b>4.1</b> 設定</a></li>
+<li class="chapter" data-level="4.2" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html"><i class="fa fa-check"></i><b>4.2</b> 推測統計と推定・検定</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html#母集団と標本"><i class="fa fa-check"></i><b>4.2.1</b> 母集団と標本</a></li>
+<li class="chapter" data-level="4.2.2" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html#記述統計"><i class="fa fa-check"></i><b>4.2.2</b> 記述統計</a></li>
+<li class="chapter" data-level="4.2.3" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html#推測統計"><i class="fa fa-check"></i><b>4.2.3</b> 推測統計</a></li>
+<li class="chapter" data-level="4.2.4" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html#標本統計量は母数と一致しない"><i class="fa fa-check"></i><b>4.2.4</b> 標本統計量は母数と一致しない</a></li>
+<li class="chapter" data-level="4.2.5" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html#点推定と区間推定"><i class="fa fa-check"></i><b>4.2.5</b> 点推定と区間推定</a></li>
+<li class="chapter" data-level="4.2.6" data-path="s42_infer_stat.html"><a href="s42_infer_stat.html#統計的仮説検定"><i class="fa fa-check"></i><b>4.2.6</b> 統計的仮説検定</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="s43_degree_freedom.html"><a href="s43_degree_freedom.html"><i class="fa fa-check"></i><b>4.3</b> 自由度とは</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="s43_degree_freedom.html"><a href="s43_degree_freedom.html#二種類の分散"><i class="fa fa-check"></i><b>4.3.1</b> 二種類の分散</a></li>
+<li class="chapter" data-level="4.3.2" data-path="s43_degree_freedom.html"><a href="s43_degree_freedom.html#母分散は標本分散より常に大きい"><i class="fa fa-check"></i><b>4.3.2</b> 母分散は標本分散より常に大きい？</a></li>
+<li class="chapter" data-level="4.3.3" data-path="s43_degree_freedom.html"><a href="s43_degree_freedom.html#使ってもらえないデータの立場"><i class="fa fa-check"></i><b>4.3.3</b> 使ってもらえないデータの立場</a></li>
+<li class="chapter" data-level="4.3.4" data-path="s43_degree_freedom.html"><a href="s43_degree_freedom.html#表を書いて確かめよう"><i class="fa fa-check"></i><b>4.3.4</b> 表を書いて確かめよう</a></li>
+<li class="chapter" data-level="4.3.5" data-path="s43_degree_freedom.html"><a href="s43_degree_freedom.html#自由度で割る"><i class="fa fa-check"></i><b>4.3.5</b> 自由度で割る</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c5_anova.html"><a href="c5_anova.html"><i class="fa fa-check"></i><b>5</b> 分散分析を分解する</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="s51_about_variance.html"><a href="s51_about_variance.html"><i class="fa fa-check"></i><b>5.1</b> 分散とは何か</a></li>
+<li class="chapter" data-level="5.2" data-path="s52_hypothesis.html"><a href="s52_hypothesis.html"><i class="fa fa-check"></i><b>5.2</b> サークル所属と満足度の関係</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="s52_hypothesis.html"><a href="s52_hypothesis.html#帰無仮説と対立仮説"><i class="fa fa-check"></i><b>5.2.1</b> 帰無仮説と対立仮説</a></li>
+<li class="chapter" data-level="5.2.2" data-path="s52_hypothesis.html"><a href="s52_hypothesis.html#使用するデータ"><i class="fa fa-check"></i><b>5.2.2</b> 使用するデータ</a></li>
+<li class="chapter" data-level="5.2.3" data-path="s52_hypothesis.html"><a href="s52_hypothesis.html#表記方法の確認"><i class="fa fa-check"></i><b>5.2.3</b> 表記方法の確認</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="s53_analysis.html"><a href="s53_analysis.html"><i class="fa fa-check"></i><b>5.3</b> 分散分析</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="s53_analysis.html"><a href="s53_analysis.html#平均値がまったく同じだとする仮説"><i class="fa fa-check"></i><b>5.3.1</b> 平均値がまったく同じだとする仮説</a></li>
+<li class="chapter" data-level="5.3.2" data-path="s53_analysis.html"><a href="s53_analysis.html#平均値と偏差平方和excel"><i class="fa fa-check"></i><b>5.3.2</b> 平均値と偏差平方和（Excel）</a></li>
+<li class="chapter" data-level="5.3.3" data-path="s53_analysis.html"><a href="s53_analysis.html#平均が異なるとする仮説"><i class="fa fa-check"></i><b>5.3.3</b> 平均が異なるとする仮説</a></li>
+<li class="chapter" data-level="5.3.4" data-path="s53_analysis.html"><a href="s53_analysis.html#群ごとの平均値と群内平方和excel"><i class="fa fa-check"></i><b>5.3.4</b> 群ごとの平均値と群内平方和（Excel）</a></li>
+<li class="chapter" data-level="5.3.5" data-path="s53_analysis.html"><a href="s53_analysis.html#全平方和群内平方和の意味すること"><i class="fa fa-check"></i><b>5.3.5</b> 「全平方和＞群内平方和」の意味すること</a></li>
+<li class="chapter" data-level="5.3.6" data-path="s53_analysis.html"><a href="s53_analysis.html#自由度で割って比較する"><i class="fa fa-check"></i><b>5.3.6</b> 自由度で割って比較する</a></li>
+<li class="chapter" data-level="5.3.7" data-path="s53_analysis.html"><a href="s53_analysis.html#平均値を選ぶ自由の数"><i class="fa fa-check"></i><b>5.3.7</b> 平均値を選ぶ「自由」の数</a></li>
+<li class="chapter" data-level="5.3.8" data-path="s53_analysis.html"><a href="s53_analysis.html#平方和の差を自由度で割る"><i class="fa fa-check"></i><b>5.3.8</b> 平方和の差を自由度で割る</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="s54_anova_table.html"><a href="s54_anova_table.html"><i class="fa fa-check"></i><b>5.4</b> 分散分析表</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="s54_anova_table.html"><a href="s54_anova_table.html#平方和と自由度"><i class="fa fa-check"></i><b>5.4.1</b> 平方和と自由度</a></li>
+<li class="chapter" data-level="5.4.2" data-path="s54_anova_table.html"><a href="s54_anova_table.html#分散あるいは平均平方"><i class="fa fa-check"></i><b>5.4.2</b> 分散あるいは平均平方</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="s55_stat_judge.html"><a href="s55_stat_judge.html"><i class="fa fa-check"></i><b>5.5</b> 判断のための2つの指標</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="s55_stat_judge.html"><a href="s55_stat_judge.html#分散比f比またはf値"><i class="fa fa-check"></i><b>5.5.1</b> 分散比（F比、またはF値）</a></li>
+<li class="chapter" data-level="5.5.2" data-path="s55_stat_judge.html"><a href="s55_stat_judge.html#p値"><i class="fa fa-check"></i><b>5.5.2</b> p値</a></li>
+<li class="chapter" data-level="5.5.3" data-path="s55_stat_judge.html"><a href="s55_stat_judge.html#分散説明率"><i class="fa fa-check"></i><b>5.5.3</b> 分散説明率</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="おわりに.html"><a href="おわりに.html"><i class="fa fa-check"></i>おわりに</a>
+<ul>
+<li class="chapter" data-level="" data-path="参考文献.html"><a href="参考文献.html"><i class="fa fa-check"></i>参考文献</a>
+<ul>
+<li class="chapter" data-level="" data-path="参考文献.html"><a href="参考文献.html#心理統計に関する書籍など"><i class="fa fa-check"></i>心理統計に関する書籍など</a></li>
+<li class="chapter" data-level="" data-path="参考文献.html"><a href="参考文献.html#bookdown-r-markdown-に関するサイトなど"><i class="fa fa-check"></i>bookdown, R markdown に関するサイトなど</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="著者自己紹介.html"><a href="著者自己紹介.html"><i class="fa fa-check"></i>著者自己紹介</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">心理統計をもういちど</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="s42_infer_stat" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> 推測統計と推定・検定<a href="s42_infer_stat.html#s42_infer_stat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="母集団と標本" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> 母集団と標本<a href="s42_infer_stat.html#母集団と標本" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>最初に、母集団と標本について確認しましょう。</p>
+<p>「標本（サンプル）」は、実際に調査に回答してくれた人々（から得られたデータ）です。「30名から回答が得られました」と記されていますから、この30名（のデータ）が標本です。</p>
+<p>「母集団」は、できればその全員に対して調査をしたい集団のことです。設定の本文中にはあいまいにしか書かれていませんが、ここでは「放送大学で学ぶ学生」（約8万人）を母集団と考えておきます[*]。Aさんは、母集団のこと、つまり放送大学で学ぶ学生全員について知りたいのですが、全員に対して調査をすることは難しいので、標本調査をして、そに結果をもとに、母集団ではどうなのだろうと推測することにしたのです。</p>
+<div class="infobox">
+<p>＊放送大学教養学部の在籍者数は、約8万人前後で推移しています。詳しくは次のサイトをご覧ください。<a href="https://www.ouj.ac.jp/about/ouj/number/" class="uri">https://www.ouj.ac.jp/about/ouj/number/</a></p>
+</div>
+</div>
+<div id="記述統計" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> 記述統計<a href="s42_infer_stat.html#記述統計" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>では、データを見ていきましょう。繰り返しますが、架空のデータです。本書では、問2と問3のみを扱います。</p>
+<p>まず、「問2：放送大学での学習のできばえや成績について、どのくらい達成感を感じていますか」についてです。以下、この質問に対する回答データを「達成感」と表すことにします。「達成感」は、「学習は最高に楽しい」を10点、「学習はまったく楽しくない」を0点として、学生が自分自身の達成感を数値化したもので、今回の調査（<em>n</em>=30）では、「達成感」の平均値は7.00、標準偏差は約1.32でした。</p>
+<p>つぎに、「問3：あなたは、放送大学の学生団体（サークル、クラス会など。非公認のものは含まない）に1つ以上所属していますか」についてです。以下「サークル所属」と表すことにします。「サークル所属」は「はい／いいえ」のどちらかを選んでもらいました。今回の調査（<em>n</em>=30）では、「はい」が15名、「いいえ」が15名で、「サークル所属」の割合は0.5(50％)でした。</p>
+</div>
+<div id="推測統計" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> 推測統計<a href="s42_infer_stat.html#推測統計" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>これらの結果をもとに、母集団ではどうなのかを推測するのが推測統計でした。もっとも単純な推測統計は、標本から得られた平均値や割合を、そのまま母集団の平均値や割合だとする方法です。つまり、</p>
+<ul>
+<li><p>標本（<em>n</em>=30）での「達成感」平均値は7.00だったので、母集団（放送大学の全学生）での「達成感」の平均値も7.00と推測できる。</p></li>
+<li><p>標本（<em>n</em>=30）での「サークル所属」比率は0.5だったので、母集団（放送大学の全学生）での「サークル所属」比率も0.5と推測できる[*]。</p></li>
+</ul>
+<p>「推測統計」と名前がついているのだから、もっといろいろな手続きをふんでいるのかと思いきや、こんなのでいいのか、と思ってしまいますね。ここで行っていることは、標本統計量をそのまま母数の推定値として使う、という方法です。こんな簡単なことでいいなら、誰でもできそうですが、残念ながら、推測統計はここで終わるのではなく、ここが出発点だといっていいと思います。どういうことでしょうか。まず、当然のことをひとつ、確かめておきましょう。</p>
+<div class="infobox">
+<p>＊ここでは、「比率」と「割合」は同じ意味であるととらえてください。厳密には、割合は「全体に対する部分の大きさを表す数値」です。全体を1と考えるので、割合は0～1の範囲の値をとります。比率は「2つ以上の数量を比較した数値」です。「今年度売り上げは昨年度の1.2倍だった」のように1より大きい値もとり得ます。本文で算出している「サークル所属」は、全体のうち何人がサークルに所属しているかを表す値ですから、「割合」と適切かと思いますが、統計の用語で「標本割合」「母割合」ではなく「標本比率」「母比率」という語が一般的に使われるので、「比率」を使用しています。</p>
+</div>
+</div>
+<div id="標本統計量は母数と一致しない" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> 標本統計量は母数と一致しない<a href="s42_infer_stat.html#標本統計量は母数と一致しない" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>標本のデータをもとに計算する値のことを「標本統計量」といいます。さきほどの「達成感」平均値は、<em>n</em>=30の標本から計算した平均値なので、「標本平均」です。「サークル所属」比率は、やはり<em>n</em>=30の標本から計算した比率なので、「標本比率」です。これに対して、母集団全員を調べて計算したらこうなるだろう、という値を、それぞれ「母平均」、「母比率」などといい、これらを総称して「母数」といいます。</p>
+<p>大前提として、標本統計量は、母数と一致しません（たまたま、偶然に、奇跡のように一致してしまうことが「絶対にない」とまでは言っていません）。なぜかというと、しょせん母集団のごく一部のデータしか見ていないのですから、ぴったり一致するほうが奇跡です[*]。</p>
+<div class="infobox">
+<p>＊標本平均も標本比率も、標本サイズを大きくすればするほど、母平均や母比率に近い値が出やすくなります。このような性質を「一致性」といいます（小杉,紀ノ定,清水(2023)）。</p>
+</div>
+</div>
+<div id="点推定と区間推定" class="section level3 hasAnchor" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> 点推定と区間推定<a href="s42_infer_stat.html#点推定と区間推定" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>とはいえ、母数が知りたくて調査や研究をしているわけであって、標本統計量がわかれば満足なのではありません。何らかの手がかりをもとに、母数を推測したいのです。その材料は標本統計量しかありません。標本平均値をもとに母平均を推測する、あるいは、標本比率をもとに母比率を推測するのは当然のことです。ですから、「母平均は標本平均値とだいたい同じだ」というのは、妥当性をもった考え方なのです。この方法、つまり、標本統計量（標本平均、標本比率など）を母数（母平均、母比率など）と見なす、という推定方法を「点推定」といいます。</p>
+<p>しかし、点推定はかならず間違えます。標本平均が母平均とぴったり一致しないのもまた、統計学の常識だからです。そこで、「母平均は標本平均とだいたい同じ」というふわっとした表現ではなく、標本平均値をもとにある範囲を計算し、「母平均はこの範囲の中にありそうだ」と推測するのです。これを「区間推定」といいます。そして、この「区間」を計算するためには、偏差平方和と自由度の理解が必要です。母数が存在しそうな区間を計算する「区間推定」は、推測統計の有力な方法のひとつです[*]。</p>
+<div class="infobox">
+<p>＊小杉,紀ノ定,清水(2023)では、ぴったり一致しなくても、ある程度近い値なら点推定が成功したことにすればよいのではないか？をシミュレーションすることから、区間推定の説明へとつなげています。たいへん面白く、わかりやすい導入方法だと思います。</p>
+</div>
+<p>このような「推定」とは別に、母数は少なくともこの値ではない、母集団を何らかの方法で2つに分けたとき、それぞれ母数は明らかに異なっているようだ、という確率的な判断をする方法もあります。これが「統計的仮説検定」です。分散分析は、後者の判断のための方法です。本書の設定にあわせて、次節で具体的に話しましょう。</p>
+<div class="column">
+<p><strong>点推定はかならず間違える？</strong></p>
+<p>間違えます、といっていますが、これは、標本統計量がでたらめな値であるとか、まったく的外れな値であるという意味ではありません。「ぴったりと一致するわけではない」という意味です。母平均が6.792であったとしたら、標本平均が6.792になって初めて「点推定が成功した」といえます。標本平均が6.791であっても、6.7923であっても、母平均と等しくない（等号で結ぶことができない）ことに変わりはありません。ものすごく近くて、ものすごく惜しいのですが、数学的には「異なる値」であり、「ぴったり一致」していません。このような意味で「間違えます」を解釈してください。「なんだよ、こんなわずかな差くらい構わないじゃないか」とはならないのですね。だから数学も統計学もきらいなんだよ、とか言われそうですが。</p>
+<p>点推定ではなく区間推定を行うためには、ここから、(1)偏差平方和と自由度をもちいて、「標準誤差」という統計量を算出すること、(2)標本統計量がしたがうと考えられる分布を特定して、計算に必要な「分布の幅」を特定することなどが必要です。これらの理解には、確率分布に関する知識が必須ですが、本書ではここの部分を扱いません。別の教科書（参考資料参照）で勉強してください。</p>
+</div>
+</div>
+<div id="統計的仮説検定" class="section level3 hasAnchor" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> 統計的仮説検定<a href="s42_infer_stat.html#統計的仮説検定" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>標本（<em>n</em>=30）での「達成感」平均値は7.00でしたが、標本を「サークル所属」しているかしていないかに分けて平均値を計算すると、サークル所属していないグループ（<em>n</em>=15）では、「達成感」平均値は6.60、サークル所属しているグループ（<em>n</em>=15）では、7.40でした。ここまでは記述統計です。サークル所属しているグループのほうが少し達成感が高いという結果でした。</p>
+<p>では、母集団全体を、サークル所属しているかどうかで2つのグループに分けたうえで、「達成感」の平均値を計算したとしたら、やはり「サークル所属しているグループのほうが少し達成感が高い」という結果になるのでしょうか。つまり、母集団を2つのグループに分けたときに、平均値に差があるといえるのでしょうか。</p>
+<p>母集団全員に対して調査をすることは不可能ですから、標本データをもとに、上記の問いに対して「差があると言えそうだ」あるいは「差があるとは言い切れない」という確率的な判断をしたいのです。そのためのツールが「統計的仮説検定」です。</p>
+<p>判断のためには、「検定統計量」という数値を計算する必要があります。そのためには、標本平均だけではなく、偏差平方和と自由度について知る必要があり、それらを用いて検定統計量を計算する必要があるのです。本書で解説する「分散分析」では、「F比（F値）」という検定統計量を計算して、それをもとに確率的な判断をします。偏差平方和の計算についてはこれまでに解説してきましたから、ここでは自由度について解説します。自由度を理解すると、分散分析ができるようになります[*]。</p>
+<div class="infobox">
+<p>＊本書で解説するのは、分散分析のもっとも簡単な形である、一要因分散分析（一元配置分散分析ともいう）です。また、説明を簡単にするために、2つのグループの平均値の比較を行います。通常、2つのグループの平均値の比較にはt検定という方法を使いますが、本書では分散分析をもちいます。なぜかというと、「はじめに」で提示して第3章で解き明かした私の疑問が、分散分析の理解を助けるヒントになっていると考えているからです。</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="s41_setting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="s43_degree_freedom.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["心理統計をもういちど.pdf", "心理統計をもういちど.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "static"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
